@@ -1,9 +1,11 @@
 from tkinter import *
-
+import tkinter as tk
+import ttkbootstrap as ttk
+from ttkbootstrap.constants import *
 
 root = Tk()
-root.configure(bg="aqua")
 root.title("Aplikasi Diabetes")
+style = ttk.Style("darkly")
 
 def hitung_risiko():
     gula_darah = float(entry1.get())
@@ -11,9 +13,9 @@ def hitung_risiko():
     
     if gula_darah < 70:
         hasil = "Level gula darah rendah. Segera konsultasikan dengan dokter."
-    elif 70 <= gula_darah <= 130:
+    elif 70 <= gula_darah <= 120:
         hasil ="Level gula darah normal Dan Tidak Mengalami Diabetes"
-    elif 130 <= gula_darah <= 200:
+    elif 120 <= gula_darah <= 200:
         hasil = "Level gula darah tinggi. Segera konsultasikan dengan dokter Dan Akan Mengalami Resiko Diabetes"
     else:
         hasil = "Anda Terkena Diabetes."
